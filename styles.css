@@ -1,4 +1,43 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: none;
+  margin: none;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times,
+    serif;
+}
+
 button {
   border: none;
   background: none;
+}
+
+#formDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: 1 / 2 / 2 / 3;
+  min-width: 210px;
+}
+
+#formDiv form {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-information-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  grid-area: 2 / 1 / 4 / 4;
 }

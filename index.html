@@ -8,10 +8,32 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <form action="#">
-      <label for="inputLocation">Input your location here</label>
-      <input type="text" id="inputLocation" name="inputLocation" />
-      <button type="button" id="searchBtn">🔍</button>
-    </form>
+    <div id="formDiv">
+      <form action="#">
+        <label for="inputLocation">Input your location here</label>
+        <div class="input-button-div">
+          <input type="text" id="inputLocation" name="inputLocation" />
+          <button type="button" id="searchBtn">🔍</button>
+        </div>
+      </form>
+      <h1 id="condition"></h1>
+    </div>
+    <div class="weather-information-div">
+      <div id="country"></div>
+      <div id="city"></div>
+      <div id="region"></div>
+      <div id="local-time"></div>
+      <div id="latitude"></div>
+      <div id="longitude"></div>
+      <div id="cloud"></div>
+      <div id="feelslike"></div>
+      <div id="gust"></div>
+      <div id="humidity"></div>
+      <div id="temp"></div>
+      <div id="pressure"></div>
+      <div id="windDegree"></div>
+      <div id="windDirection"></div>
+      <div id="windKph"></div>
+    </div>
   </body>
 </html>
