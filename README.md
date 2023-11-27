@@ -10,4 +10,4 @@ This project is from the Odin Project JavaScript course
 
 Credit
 
-- https://emojipedia.org/magnifying-glass-tilted-left
+- Background image: https://unsplash.com/backgrounds

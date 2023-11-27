@@ -13,11 +13,14 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
   font-family: source-serif-pro, Georgia, Cambria, "Times New Roman", Times,
     serif;
+
+  background: url(skyimage.jpg);
 }
 
 button {
   border: none;
   background: none;
+  font-size: 1.1rem;
 }
 
 #formDiv {
