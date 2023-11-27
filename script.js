@@ -48,12 +48,31 @@ function updateWeatherStats(weatherData) {
   windKph.innerHTML = "Wind speed kph: " + weatherData.current.wind_kph
 }
 
-async function fetchLocationData(location) {
-  const response = await fetch(
-    "https://api.weatherapi.com/v1/current.json?key=98f0156fdfbb41839fd144423231811&q=" +
-      location,
-    { mode: "cors" }
-  )
-  weatherData = await response.json()
-  updateWeatherStats(weatherData)
+const displayLoading = () => {
+  loaderContainer.style.display = "block"
 }
+
+const hideLoading = () => {
+  loaderContainer.style.display = "none"
+}
+
+async function fetchLocationData(location) {
+  displayLoading()
+  try {
+    const response = await fetch(
+      "https://api.weatherapi.com/v1/current.json?key=98f0156fdfbb41839fd144423231811&q=" +
+        location,
+      { mode: "cors" }
+    )
+    weatherData = await response.json()
+    updateWeatherStats(weatherData)
+  } catch {
+    console.log("Error when fetching API data")
+  }
+  hideLoading()
+}
+
+const loaderContainer = document.querySelector(".loader-container")
+window.addEventListener("load", () => {
+  loaderContainer.style.display = "none"
+})
